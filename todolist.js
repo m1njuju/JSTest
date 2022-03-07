@@ -65,11 +65,12 @@ function todoComBtn(event) {
     const checkbox = event.target;
     const complete = document.querySelector("#complete");
     let comCount = comArray.length;
-    if(checkbox.checked){
-        complete.textContent = `오늘 완료한 할일 : ${comCount}개`;
+    for(let i=0; i<=comArray.length;i++) {
+        if(checkbox.checked) {
+            complete.textContent = `오늘 완료한 할일 : ${comCount}개`;
+            }
+        else {
+            complete.textContent = `오늘 완료한 할일 : ${comCount-1}개`;
+        }
     }
-    else {
-        complete.textContent = `오늘 완료한 할일 : ${comCount-1}개`;
-    }
-    
 }
